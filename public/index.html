@@ -6,26 +6,18 @@
     <title>App Store Redirect</title>
 </head>
 <body>
-    <!-- <h1>Download Our App</h1> -->
-    
-    <!-- Redirection happens automatically on page load -->
-    <!-- <div class="download-button">
-        Redirecting...
-    </div> -->
-
     <script>
-        // Execute redirect as soon as page loads
-        window.onload = function() {
+        window.onload = function () {
             // Get user agent string
             const userAgent = navigator.userAgent.toLowerCase();
-            
+
             // Define store URLs (replace with your actual app URLs)
             const iosAppUrl = 'https://testflight.apple.com/join/Rl2vfoRy';
             const androidAppUrl = 'https://play.google.com/store/apps/details?id=xyz.avici.apps&hl=en&gl=US';
-            
+
             // Detect device and redirect
-            if (/iphone|ipad|ipod/.test(userAgent)) {
-                // iOS device
+            if (/iphone|ipad|ipod|mac os/.test(userAgent)) {
+                // iOS or macOS device
                 window.location.href = iosAppUrl;
             } else if (/android/.test(userAgent)) {
                 // Android device
@@ -37,7 +29,7 @@
                 // Default case or unsupported device
                 window.location.href = androidAppUrl;
             }
-        }
+        };
     </script>
 
     <style>
@@ -49,21 +41,6 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-
-        .download-button {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #007bff;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-
-        .download-button:hover {
-            background-color: #0056b3;
         }
     </style>
 </body>
