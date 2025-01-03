@@ -6,12 +6,12 @@
     <title>App Store Redirect</title>
 </head>
 <body>
-    <h1>Download Our App</h1>
+    <!-- <h1>Download Our App</h1> -->
     
     <!-- Redirection happens automatically on page load -->
-    <div class="download-button">
+    <!-- <div class="download-button">
         Redirecting...
-    </div>
+    </div> -->
 
     <script>
         // Execute redirect as soon as page loads
@@ -20,8 +20,8 @@
             const userAgent = navigator.userAgent.toLowerCase();
             
             // Define store URLs (replace with your actual app URLs)
-            const iosAppUrl = 'https://apps.apple.com/your-app-id';
-            const androidAppUrl = 'https://play.google.com/store/apps/details?id=your.app.id';
+            const iosAppUrl = 'https://testflight.apple.com/join/Rl2vfoRy';
+            const androidAppUrl = 'https://play.google.com/store/apps/details?id=xyz.avici.apps&hl=en&gl=US';
             
             // Detect device and redirect
             if (/iphone|ipad|ipod/.test(userAgent)) {
